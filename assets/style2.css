@@ -1,0 +1,45 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.head{
+    background-color: #00CCF8;
+    height: 100px;
+    width: 100%;
+}
+.black{
+    background-color: #2d2d2d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.black h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+p{
+    text-align: center;
+    padding:15px;
+}
+.padding{
+    padding-top: 40px;
+}
+.padding h6{
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+    
+}
+.tbl{
+    padding-top: 50px;
+}
+.btns{
+    padding-top: 50px;
+}
+.icu{
+    padding:10px;
+    padding-left: 60px;
+}
+.border{
+    border-color: black !important;
+}

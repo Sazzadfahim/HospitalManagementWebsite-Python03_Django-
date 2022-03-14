@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.dropbtn {
+  
+  
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #adadadb2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+.consult_btn{
+  display: inline-block;
+    padding: 0px 0px;
+    color: white;
+    background-color: #0079C1;
+    border: 2px solid #0079C1;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s;
+    transition-property: background-color, color;
+    border-radius: 25px;
+
+}
+
+
+.nav-area .icon {
+  display: none;
+}
+
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+ @media screen and (max-width: 600px) {
+  .nav-area a:not(:first-child) {display: none;}
+  .nav-area a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .nav-area.responsive {position: relative;}
+  .nav-area.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-area.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
+
+.nav-area a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+
+
+
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+  
+}
+
+
+.nav-area .sub-menu{
+    display: list-item;
+}
+
+
+
+.nav-area ul li:hover .sub-menu{
+
+   display: block;
+   position: absolute;
+   background-color: rgba(0, 128, 128, 0.37);
+   margin-top: 15px;
+   margin-left: -15px;
+
+}
+
+.nav-area ul li:hover .sub-menu ul
+{
+  display: block;
+  margin: 10px;
+
+
+
+}
+
+.nav-area ul li:hover .sub-menu ul li
+{
+ width: 150px;
+ padding: 10px;
+ border-bottom: 1px dotted white;
+ background: transparent;
+ text-align: left;
+
+
+}
+
+.nav-area ul li:hover .sub-menu ul li:last-child
+{
+ border-bottom: none;
+
+}
+
+.nav-area ul li:hover .sub-menu ul li:hover{
+
+  color: #007ac17c;
+
+}
+
+
+
+#about-img  .li .user_icon{
+     width: 20px;
+     border-radius: 50%;
+     cursor: pointer;
+
+}
+
+.section-title {
+	font-size: 3rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color:#0079C1;
+}
+
+
+.topnav {
+    background-color: #0079C1;
+    overflow: hidden;
+
+  }
+  
+
+.topnav h5{
+    text-decoration: none;
+    font-family: poppins;
+    text-transform: uppercase;
+    color:white;
+    text-align: center;
+    
+
+  
+  }
+
+.topnav li{
+    padding: 5px;
+    font-size: 12px;
+    margin-left: 30px;
+    margin-right: 135px;
+    display: inline-block;
+
+}
+ 
+  .topnav a {
+    margin-left: 10px;
+    margin-right: 20px;
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 6px 6px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+ 
+  .topnav a:hover {
+    color: white;
+    border-radius: 10px;
+    box-shadow:  0 0 5px #141414,
+                 0 0 10px #66ffff;
+  }
+
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+label.logo{
+  
+  color: #007bff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+
+
+}
+ .profile_btn{
+
+    display: inline-block;
+    padding: 0px 0px;
+    color: white;
+    background-color: #0079C1;
+    border: 2px solid #0079C1;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s;
+    transition-property: background-color, color;
+    border-radius: 25px;
+
+
+}
+
+
+
+
+
+
+  .profile_btn:hover{
+    color: white;
+    background-color: rgb(79, 143, 216);
+   
+   }
+   
+
+
+   .cta{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 0px;
+    color: white;
+    background-color: #0079C1;
+    border: 2px solid #0079C1;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s;
+    transition-property: background-color, color;
+    border-radius: 25px;
+
+
+   }
+   .cta:hover{
+    color: white;
+    background-color:rgba(0, 0, 0, 0.411);
+   
+   }
+
+
+.nav-area{
+    
+    float: left;
+    list-style: none;
+    margin-top: 0px;
+}
+.nav-area li{
+    display: inline-block;
+}
+
+.nav-area li a {
+    margin-right: 20px;
+color: black;
+text-decoration: none;
+padding: 5px 20px;
+font-family: poppins;
+font-size: 16px;
+text-transform: uppercase;
+
+}
+
+.nav-area li a:hover{
+    color: rgb(14, 15, 15);
+    border-radius: 15px;
+    box-shadow:  0 0 5px #141414,
+                 0 0 10px #66ffff;
+  }
+
+/*nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+.nav-area li a:hover{
+    color: rgb(14, 15, 15);
+    border-radius: 15px;
+    box-shadow:  0 0 5px #141414,
+                 0 0 10px #66ffff;
+  }
+  .nav-area ul{
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: collapse;
+    transition: top .3s;
+  }
+
+  .nav-area ul li a{
+    color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  visibility: visible;
+  
+  }
+
+*/
+
+
+
+
+
+
+.border{
+    background: #f2f2f291;
+    height: 80px;
+    width: 100%;
+       
+}
+
+.wrapper1{
+    width: 1171px;
+    margin: auto;
+}
+
+.menu-bar{
+    background: #007bff;
+}
+
+
+@keyframes text_reveal_box{
+    50%{
+
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+
+
+}
+#hero .cta{
+    
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: #0079C1;
+    border: 2px solid #0079C1;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s;
+    transition-property: background-color, color;
+    border-radius: 25px;
+
+
+
+}
+
+#hero .cta:hover{
+ color: white;
+ background-color:rgba(0, 0, 0, 0.411);
+
+}
+
+
+#about .container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+ 
+ }
+  
+
+
+
+
+
+
+
+
+
+
+
+ .logo{
+    float: left;
+
+}
+  .logo img{
+    height: 12%;
+    width: 12%;
+    padding: 2px 0px;
+    
+} 
+
+
+/*resposive*/
+
+@media (max-width:600px){
+    .wrapper {
+width: 100%;
+}
+.logo {
+float: left;
+width: 50%;
+text-align: center;
+margin: auto;
+
+}
+img {
+width: 2;
+}
+
+
+.nav-area {
+    
+    height: 80px;
+    width: 100%;
+float: left;
+margin-top: 0;
+}
+    .nav-area li a {
+padding: 5px;
+font-size: 11px;
+}
+.nav-area {
+text-align: center;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

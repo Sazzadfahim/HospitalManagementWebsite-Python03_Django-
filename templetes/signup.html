@@ -1,0 +1,58 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<html>
+<head> 
+	<title> Sign-up page</title>
+	<link rel="stylesheet" href="{% static 'globsign.css'%}"> 
+
+ </head>
+
+<body>
+	
+<h2>Fill up the form</h2>
+<br>
+<br>
+<br>
+
+<body>
+
+
+<dir class= "form-container">
+	<div class = "user-img"> <img src= ""/> <div>
+	
+		<form action = "" method= "post">
+			{% csrf_token %}
+			<ul class= "list" id = h>
+
+		<li><h3>Sign-up</h3></li>
+		<li> <label ><b> First name</b></label>  	<input type= "text" name= "first_name" placeholder= "  First Name"></li>
+		<li><label ><b> Last name</b></label>  		<input type= "text" name= "last_name" placeholder= "  Last Name"></li>
+		<li> <label ><b> User Name</b>          	<input type= "text" name= "username" placeholder= "  Username"></li>
+		<li> <label ><b> Email</b></label>			<input type= "text" name= "email" placeholder= "  Email"></li>
+		<li><label><b> Password</b></label>		 	<input type= "Password" name= "password1" placeholder= "  Password"></li>
+		<li> <label><b> Confirm Password</b></label><input type= "Password" name= "password2" placeholder= "  Confirm Password"></li>
+
+		<li><input type="submit" ></li>
+		
+
+		
+        <li>already have an account? <br> <a href = "http://127.0.0.1:8000/accounts/login" > login </a></li>
+
+        </form>
+
+        <div>
+            {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+         </div>
+
+        
+		
+
+
+	</ul>
+ </dir>
+
+</body>
+</html>

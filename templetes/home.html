@@ -1,0 +1,121 @@
+{% load static %}
+
+<!doctype html>
+<link rel="stylesheet" href={% static "style_home.css" %}>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+
+<div class="topnav">
+     <div class="wrapper">  
+    <ul>
+    <li><h5>+880 1715 69334</h5> </li>
+    <li> <h5>wecare_org@gmail.com</h5></li>
+    
+    {% if user.is_authenticated %}
+    <a> Hello, {{user.first_name}}</a>
+    <a href="http://127.0.0.1:8000/accounts/logout">Logout</a>
+    {% else %}
+    <a href="http://127.0.0.1:8000/accounts/login">Login</a>
+    <a href="http://127.0.0.1:8000/accounts/register">Sign-up</a>
+    {% endif %}
+    
+    
+
+    </ul>
+     </div>
+  </div>
+
+
+<header>
+    
+    <div class="border">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="" alt=""  height="300px" width="100%">
+        </div>
+          <label class="logo">WeCarE</label>
+        <ul class="nav-area">
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+            
+            <li><a href="http://127.0.0.1:8000/searchinfo/hospital">Search Hos</a></li>
+            
+            
+            
+             
+             <li><a href="http://127.0.0.1:8000/searchinfo/search1">Check available seats</a></li>
+             <li><a href="http://127.0.0.1:8000/searchinfo/oxygensup">Oxygen supply</a></li>
+               
+          
+            
+            <li><a href="http://127.0.0.1:8000/searchinfo/booking">Booking</a></li>
+        
+            
+            
+            
+            <!--<input type="checkbox" id="btn-2"> -->
+               <ul>
+                  <li><a href="#">Searh Hospitals</a>
+                  <a href="#">Booking</a>
+                  <a href="#">Medicine</a></li>
+              </ul>
+            <li><a href="#">appointment</a></li>
+            <li><a href="#" type="button" class="profile_btn"><i class="fa fa-user" ></i>Profile</a></li>
+            <!-- <img src={% static "./images/user.png" %} class="user_icon"> -->
+            </ul>
+            
+            </div>
+        </div>
+    <section id='hero'>
+    <div class="hero container">
+
+    <div> 
+        <h3>Welcome to WeCare</h3>
+        <h1>We are here for your care<span></span></h1>
+        <h2>Here you can find qualified doctor 24/7 for emergency <span></span></h2>
+        <h2> consultaion during this corona<span></span></h2>
+        <a href="#" class="cta">Make an appointment</a> 
+    </div>
+    </div>
+
+</section>
+
+
+
+
+
+<!-- About Section -->
+<section id="about">
+     <div class="about container">
+       <div class="col-left">
+         <div class="about-img">
+          <img src={% static "/img2/.jpg" %} alt=""  height="300px" width="100%"> 
+         </div>
+       </div>
+       <div class="col-right">
+         <h1 class="section-title">About <span>Us</span></h1>
+         <h2>WeCarE</h2>
+         <p> We are offering people to search emergency informations, buy medicines online and consult with doctors as well as book their ICU, seat and oxygen cylinder supply. Our only aim is service people in their desperate need for medical services!</p>
+         <a href="#" class="cta">Contact Us!</a>
+       </div>
+     </div>
+
+   </section>
+   <!-- End About Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

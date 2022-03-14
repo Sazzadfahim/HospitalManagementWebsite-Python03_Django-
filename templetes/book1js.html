@@ -1,0 +1,88 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Booking
+    </title>
+    <link rel="stylesheet" href="{% static 'stylejs.css' %}">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>hospital_name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <br>
+                        
+                        <select type="text" name="fullName" id="fullName">
+                            {% for name in names %}
+                                <option value="{{name.id}}">{{name.hospitsl_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label>booking_type [You can book only one seat at a time]</label>
+                        <input type="text" name="booking_type" id="booking_type">
+                    </div>
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="Name" id="Name">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="Email" id="Email">
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Hospital name</th>
+                            <th>booking_type</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+
+                            <th>  </th>
+                            <th>Time limitation</th>
+                            <th>Total payment</th>
+
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                    </tbody>
+
+                    
+                </table>
+
+            </td>
+            <br>
+            <h1 class = "b"> Insert your information for booking </h1>
+        </tr>
+    </table>
+    <script src="{% static 'script.js' %}"></script>
+    <a href=" http://127.0.0.1:8000/searchinfo/confirmation"><input type="submit" value="See payment process">
+
+</body>
+
+</html>

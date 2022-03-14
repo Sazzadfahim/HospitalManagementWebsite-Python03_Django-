@@ -1,0 +1,57 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<html>
+<head> 
+	<title> record</title>
+	<link rel="stylesheet" href="{% static 'globsign.css'%}"> 
+
+ </head>
+
+<body>
+<br>
+<br>
+<br>
+<br>
+	
+<h2>Admin page</h2>
+<br>
+<br>
+<br>
+
+<body>
+
+
+<dir class= "form-container">
+	<div class = "user-img">  <div>
+	
+		<form action = "" method= "post">
+			{% csrf_token %}
+			<ul class= "list" id = h>
+
+		<li><h3>Records</h3></li>
+		<li> <label ><b> Name</b></label>  	<input type= "text" name= "name" placeholder= "  Enter"></li>
+		<li><label ><b> Email</b></label>  		<input type= "text" name= "email" placeholder= "  Enter"></li>
+		<li> <label ><b> Room No</b>          	<input type= "text" name= "RoomNo" placeholder= "  Enter"></li>
+		
+
+		<li><input type="submit" ></li>
+		
+
+		
+        <li><br> <a href = "http://127.0.0.1:8000/" > home </a></li>
+
+        </form>
+
+        <div>
+            {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+         </div>
+
+
+	</ul>
+ </dir>
+
+</body>
+</html>

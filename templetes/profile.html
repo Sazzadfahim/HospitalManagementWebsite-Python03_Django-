@@ -1,0 +1,133 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+<!doctype html>
+
+<link rel="stylesheet" href="{% static 'style_profile.css' %}" >
+<link rel="stylesheet" href= "{% static 'nav.css' %}">
+<link rel="stylesheet" href="{% static 'nav.js' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+ 
+ <div class="wrapper1">
+     
+  <label class="logo">WeCarE</label>
+        <ul class="nav-area">
+            <li><a href="http://127.0.0.1:8000/">Home</a></li>
+            <li><a href="">About</a></li>
+            
+            <div class="dropdown">
+             <li><li><a href="">Services</a></li></li>
+              <div class="dropdown-content">
+                <a href="http://127.0.0.1:8000/searchinfo/hospital">Search Hospitals</a>
+                <a href="http://127.0.0.1:8000/searchinfo/search1">Check available seats</a>
+                <a href="http://127.0.0.1:8000/searchinfo/oxygensup">Oxygen supply</a>
+              </div>
+            </div>
+            <li><a href="#">Department</a></li>
+
+        
+       
+         
+         <li><a href="http://127.0.0.1:8000/consult">appointment</a></li>
+         {% if user.is_authenticated %}
+         
+      
+        <li><a href="http://127.0.0.1:8000/accounts/logout" type="button" class="profile_btn"><i class="fa fa-user" ></i>Log out</a></li>
+        {% else %}
+    
+       
+       <li><a href="http://127.0.0.1:8000/accounts/login" type="button" class="profile_btn"><i class="fa fa-login" ></i>Login</a></li>
+       {% endif %}
+    
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+        
+         
+         </div>
+
+     
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <header>
+    
+    <i class="fa fa-bars" aria-hidden="flase"></i>
+  </header>
+  <main>
+    <div class="row">
+      <div class="left col-lg-4">
+        <div class="photo-left">
+       
+          <img class="photo" src="{{request.user.user_profile.img.url}}">
+        </div>
+        {% if user.is_authenticated %}
+        
+        <h4 class="name">{{request.user.user_profile.first_name}} {{request.user.user_profile.last_name}}</h4>
+        <p class="info">new user</p>
+        <p class="info">{{user.email}}</p>
+        
+        
+
+        
+        
+        <span class="follow"><a href="http://127.0.0.1:8000/edit_pro" type="button">Edit profile</a></span>
+      </div>
+    </div>
+
+  <div class="wrap-grid">
+    
+
+    <div class="wrap-grid">
+    
+
+      <div class="flex-container">
+        <div class="pro_info"><h4> First name  :        </h4>{{request.user.user_profile.first_name}}</div>
+        
+        <div class="pro_info"><h4>Last name   :  </h4>{{request.user.user_profile.last_name}}</div>
+        <div class="pro_info"><h4>User name   :  </h4>{{request.user.user_profile.user_name}}</div>
+        <div class="pro_info"><h4>Email       :  </h4>{{user.email}}</div>  
+        <div class="pro_info"><h4>Phone no.   :  </h4>{{request.user.user_profile.phone_no}}</div>
+        <div class="pro_info"><h4>Address     :  </h4>{{request.user.user_profile.address}}</div>
+        <div class="pro_info"><h4>History     :  </h4>{{request.user.user_profile.history}}</div>  
+        
+      </div>
+
+  </div>
+  {% endif %}
+   
+  
+  
+  </main>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+
+<body>
+    <form action="{% url 'index1' %}" method="POST">
+     {% csrf_token %}
+
+    
+    
+    <select name= "name">
+
+        {% for name in names %}
+            <option value="{{name.id}}">{{name.s_name}}</option>
+        {% endfor %}
+    </select>
+    <input type="text" name="roll" placeholder="roll" required><br>
+
+    <input type="submit" >
+    </form>
+
+    
+
+
+</body>
+
+
+</html>

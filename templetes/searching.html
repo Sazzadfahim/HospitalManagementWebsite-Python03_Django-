@@ -1,0 +1,96 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hospital</title>
+	<link rel="stylesheet" href="{% static 'sst.css' %}">
+</head>
+<body>
+  {%  include 'nav.html' %}
+
+
+<div class="wrapper">
+  <div class="header">
+    <div class="title">
+     Find Hospital Near You!
+    </div>
+
+    <div class="search_box">
+      <input type="text" id="search_input" placeholder="Enter Area......">
+    </div>
+  </div>
+
+  <div class="table_wrap">
+    <div class="table_header">
+      <ul>
+        <li>
+          <div class="item">
+            <div class="name x">
+              <span>Area</span>
+            </div>
+            <div class="phone x">
+              <span>Hospital name</span>
+            </div>
+            <div class="city x">
+              <span>city</span>
+            </div>
+            <div class="website x">
+              <span>website</span>
+            </div>
+            <div class="bkash_no x">
+              <span>bkash no</span>
+            </div>
+            <div class="Contact_no x">
+              <span>Contact no</span>
+
+
+
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+   
+    <div class="table_body">
+      <ul>
+        {% for dest in dests %}
+        <li>
+          <div class="item">
+           
+            <div class="name x">
+              <span>{{dest.area}}</span>
+            </div>
+            <div class="phone x">
+              <span>{{dest.hospitsl_name}} </span>
+            </div>
+            <div class="city x">
+              <span>{{dest.city}}</span>
+            </div>
+            <div class="website x">
+              <span>{{dest.website}}</span>
+            </div>
+            <div class="bkash_no x">
+              <span>{{dest.Bkash_no}}</span>
+            </div>
+            <div class="Contact no x">
+              <span>{{dest.contact_no}}</span>
+          </div>
+        </li>
+        {% endfor %}
+       
+      
+       
+      </ul>
+    </div>
+  </div>
+
+<script src="{% static 'scripts.js' %}"></script>
+
+</div>
+</body>
+</html>

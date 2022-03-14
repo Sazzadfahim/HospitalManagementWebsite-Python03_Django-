@@ -1,0 +1,23 @@
+body{
+	
+	background: url('')no-repeat; background-size: 100%;
+	background-color: #5F7FB0;
+	 
+
+}
+.a{
+    padding: 200px 600px;
+}
+
+.form-container{
+
+
+	width: 269px;
+	height: autox;
+	padding: 30px 80px;
+	
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 10px ;
+	box-shadow: 0 0 20px 0 #000;
+	margin: auto;
+}

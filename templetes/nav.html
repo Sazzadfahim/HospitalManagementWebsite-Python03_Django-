@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+
+<link rel="stylesheet" href="{% static 'nav.css' %}">
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+
+
+
+<header>
+    
+  <div class="border">
+  <div class="wrapper">
+      
+   <label class="logo">WeCarE</label>
+      <ul class="nav-area">
+          <li><a href="http://127.0.0.1:8000/">Home</a></li>
+          <li><a href="">About</a></li>
+          
+          <div class="dropdown">
+           <li><li><a href="">Services</a></li></li>
+            <div class="dropdown-content">
+              <a href="http://127.0.0.1:8000/searchinfo/hospital">Search Hospitals</a>
+              <a href="http://127.0.0.1:8000/searchinfo/search1">Check available seats</a>
+              <a href="http://127.0.0.1:8000/searchinfo/oxygensup">Oxygen supply</a>
+            </div>
+          </div>
+          <li><a href="#">Department</a></li>
+
+        
+           <li><a href="http://127.0.0.1:8000/booking11">Booking</a></li>
+          <li><a href="http://127.0.0.1:8000/consult">Appointment</a></li>
+          
+        
+          {% if user.is_authenticated %}
+         <li><a href="http://127.0.0.1:8000/profile" type="button" class="profile_btn"><i class="fa fa-user" ></i>Profile</a></li>
+         {% else %}
+        
+         <li><a href="http://127.0.0.1:8000/accounts/login" type="button" class="profile_btn"><i class="fa fa-user" ></i>Login</a></li>
+        {% endif %}
+     
+
+          </ul>
+          
+          </div>
+      </div>

@@ -1,0 +1,60 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'loginstyle.css' %}">
+   
+    
+</head class= a>
+
+
+<h2>We are here for you</h2>
+<br>
+<br>
+<br>
+
+ <body>
+    <dir class= "form-container">
+        <div class = "user-img"> <img src= ""/> <div>
+        <ul class= "list" id = h>
+            <li><h3> Login </h3></li>
+        <form action = "" method= "post">
+         {% csrf_token %}
+         
+
+         
+         <li> <input type="text" name="username" placeholder="  username" ></li>
+         <li><input type="text" name="password" placeholder="  password"> </li>
+         
+         
+         <li><input type="submit" ></li>
+
+         <li>New here? Sign-up first <br><br> <a href = "http://127.0.0.1:8000/accounts/register " > Sign-up </a></li>
+         
+        </ul>
+
+
+     </form>
+     
+     <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+     </div>
+
+     
+
+    
+    </dir>
+    
+
+ </body>
+</html>

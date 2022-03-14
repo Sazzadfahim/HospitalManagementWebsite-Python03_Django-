@@ -1,0 +1,106 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'Oxgenstyle.css' %}">
+    <title>Oxygen supply</title>
+</head>
+
+<body>
+    {%  include 'nav.html' %}
+    <div class="row">
+        <div class="left" style="background-color:#0079C1;">
+            
+            
+            <!--home-->
+            
+           
+            <h2 type="text" id="mySearch" onkeyup=""  title="Type in a category">Emergency Oxygen supply</h2>
+            <ul id="myMenu">
+                <li ><a href="http://127.0.0.1:8000/oxygen">See Contact list for Oxygen supply</a></li>
+
+
+                <br>
+                
+                <div class="dropdown">
+                     <button onclick="myFunction()" class="dropbtn">Buy Oxygen Cylinder? go to these links</button>
+                        <div id="myDropdown" class="dropdown-content">
+                    <a href="https://www.emssafetyservices.com/how-to/o2-101/" target= "_blank">emssafetyservices</a>
+                    <a href="https://www.safetycompany.com/categories/first-aid-emergency-response/emergency-oxygen/" target= "_blank" >safetycompany</a>
+                    <a href="https://www.tigermedical.com/Departments/Medical-Equipment/Emergency-Oxygen-Kits.aspx" target= "_blank">tigermedical</a>
+
+                
+                         </div>
+
+                         
+                    </div>
+                <!--link-->
+                
+
+            </ul>
+        </div>
+
+        <div class="right" style="background-color:#ddd;">
+
+            <!-- pic -->
+            <section>
+                <img class="pic" src="{% static 'pic/pic11.jpg' %}" style="width:100%">
+            </section>
+        </div>
+
+
+
+
+
+
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("mySearch");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myMenu");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+
+        <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+</body>
+</html

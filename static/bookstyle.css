@@ -1,0 +1,72 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.head{
+    background-color: #8C8493;
+    height: 100px;
+    width: 100%;
+}
+.black{
+    background-color: #2d2d2d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.black h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+p{
+    text-align: center;
+    padding:15px;
+}
+.padding{
+    padding: 40px;
+}
+
+.table{
+     padding-top: 30px;
+
+}
+.padding h6{
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+    
+}
+.tbl{
+    padding-top: 50px;
+}
+.btns{
+    padding-top: 50px;
+}
+.icu{
+    padding:10px;
+    padding-left: 60px;
+}
+.border{
+    border-color: black !important;
+}
+
+ul.list{
+ list-style: none;
+ 
+}
+.form1{
+    padding: 50px;
+}
+.input1{
+    padding: 10px;
+}
+.btn2{
+    padding-top: 10px;
+    padding-left: 200px;
+}
+.img1{
+    padding-top: 150px;
+}
+
+.xyz{
+    margin-bottom: 100px;
+}

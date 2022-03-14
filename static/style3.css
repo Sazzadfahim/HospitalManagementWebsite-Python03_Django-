@@ -1,0 +1,78 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+   
+
+}
+.head{
+    background-color:#0093CF;
+    height: 100px;
+    width: 100%;
+}
+.black{
+    background-color: #2d2d2d;
+    height: 90px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.black h1{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+p{
+    text-align: center;
+    padding:15px;
+}
+.padding{
+    padding-top: 40px;
+    padding-bottom: : 40px;
+}
+.padding h6{
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+    
+}
+.tbl{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.btns{
+    padding-top: 50px;
+}
+.icu{
+    display:flex;
+    padding: 10px;
+    
+    text-align: center;
+    
+    padding-bottom: 30px;
+    padding-left: 80px;
+
+}
+
+
+
+.border{
+    border-color: black !important;
+    box-shadow: 0 0 1px 0 #000;
+}
+
+
+.btn4{
+    display:flex;
+    
+    padding-bottom: 30px;
+    padding-left: 400px;
+    
+}
+
+.btn2{
+    padding: 10px;
+}
+
+.btn3{
+    padding: 10px;
+}
+
+

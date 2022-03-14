@@ -1,0 +1,89 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  type="text/css" href="{% static 'bootstrap.css' %}">
+    <link rel="stylesheet"  type="text/css" href="{% static 'style2.css' %}">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <!-- hopitalinfo -->
+    <title>Hospital information</title>
+</head>
+
+<body>
+    {%  include 'nav.html' %}
+    
+    <div class="">
+        <div class="col-12">
+            
+        </div>
+    </div>
+    <div class="row black">
+        <div class="col-12">
+            <h1> Available Seats</h1>
+            
+        </div>
+    </div>
+    
+     {% for info in infos %}
+    <div class="">
+        <div class="row padding">
+            <div class="col-5">
+                <img src="{{info.img.url}}" alt="" height="200px" width="50%">
+                <p>{{info.hospitsl_name}}</p>
+            </div>
+            <div class="col-4">
+                <div class="tbl">
+                    <table class="table ">
+                        <thead>
+                          <tr>
+                            
+                    
+                            <th scope="col">Hospital Name: </th>
+                            <th scope="col">{{info.hospitsl_name}} </th>
+                          </tr>
+                          <tr>
+                    
+                            <th scope="col">ICU: </th>
+                            <th scope="col">{{info.ICU}}</th>
+                          </tr>
+                          <tr>
+                    
+                            <th scope="col">Ward: </th>
+                            <th scope="col">{{info.ward}}</th>
+                          </tr>
+                          <tr>
+                    
+                            <th scope="col">Oxygen Supply: </th>
+                            <th scope="col">{{info.oxygen_supply }}</th>
+                          </tr>
+                          
+                        </thead>
+                        
+                      </table>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="btns">
+                    <div class="icu">
+                        <a href="http://127.0.0.1:8000/booking11"><button type="submit"> BOOk NOW </button></a>
+                    
+
+            </div>
+
+
+        </div>
+    </div>
+</br>
+{% endfor %}
+
+</body>
+
+
+
+</html>

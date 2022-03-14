@@ -1,0 +1,40 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <title>register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'regstyle.css' %}">
+    
+</head>
+
+
+ <body class= a>
+
+     <form action = "register" method= "post">
+         {% csrf_token %}
+         <h1> Sign-up </h1>
+
+         <input type="text" name="first_name" placeholder="first_name"><br>
+         <input type="text" name="last_name" placeholder="Last_name"><br>
+         <input type="text" name="username" placeholder="username"><br>
+         <input type="text" name="email" placeholder="email" ><br>
+         <input type="text" name="password1" placeholder="password" ><br>
+         <input type="text" name="password2" placeholder="Confirm password" ><br>
+         
+         <input type="submit" >
+
+
+     </form>
+     <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+     </div>
+
+</body>
+</html>
